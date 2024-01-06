@@ -1,11 +1,9 @@
-require("dotenv").config();
-const express = require("express");
-
+import express from "express";
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
-app.listen(process.env.PORT, () => {
-  console.log("listening on port " + process.env.PORT);
+app.listen(port, () => {
+  console.log("listening on port " + port);
 });
 
 const exampleJson = { name: "John", age: 30, car: null };
